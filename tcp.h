@@ -146,6 +146,7 @@ struct tcphdr {
 #define TCP_MAXHLEN	(0xf<<2)	/* max length of header in bytes */
 #define TCP_MAXOLEN	(TCP_MAXHLEN - sizeof(struct tcphdr))
 					/* max space left for options */
+#define	TCP_INITCWND	10	/* initial tcp windows */
 #endif /* __BSD_VISIBLE */
 
 /*
