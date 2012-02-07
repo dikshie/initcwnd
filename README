@@ -1,2 +1,4 @@
 0.this is experimental so the risk is yours :) 
 1.increase initial tcp windows as proposed by Google, inc.
+  Linux implementation unit is in packets/windows, while BSD implementation unit is in bytes.
+  Therefore (10 packets * 1460 bytes).
