@@ -345,8 +345,7 @@ cc_conn_init(struct tcpcb *tp)
 	 * XXX: We currently check only in syncache_socket for that.
 	 */
 	if (V_tcp_do_rfc3390)
-		tp->snd_cwnd = min(4 * tp->t_maxseg,
-		    max(2 * tp->t_maxseg, 4380));
+		tp->snd_cwnd = (TCP_INITCWND * 1460); 
 	else
 		tp->snd_cwnd = tp->t_maxseg;
 
